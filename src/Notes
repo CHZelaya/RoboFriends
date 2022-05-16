@@ -1,0 +1,56 @@
+Building the RoboFriends application
+
+Think in components.
+
+Build a card component, copy and paste the rest.
+
+This is important: You cant return more then one item in Reacts functions.
+
+Exports that are not default exports must be destructured when imported.
+Such as:
+
+// cats.js file
+
+export const cats = [
+{
+name: "Sir Whiskers"
+},
+{
+name: "John Meowington"
+}
+]
+
+// index.js file
+
+import { cats } from "./cats.js"; <-- Destructured.
+
+Anything done in JavaScript regarding JSX, must be destructured to tell the VDOM that it is in fact, a JavaScript expression and not just another line of JSX.
+
+Keys props are important in React so that the engine can distinguish between different components.
+
+!! STATE
+State simply means the description of your app, State is simply an object that describes youre application, and this State that describes this application is the robots and whatever is entered in the search box.
+
+STATE is able to change.
+
+PROPS are simply things that come out of STATE. A parent feeds STATE into a child component, and as soon as this child component recieves STATE, it is a PROP. That child can never change that PROP. The parent simply tells the child what the STATE is, and the child recieves the PROP.
+
+Adding STATE in React is done simply by adding a constructor to the class.
+For example:
+
+class App extends Component {
+constructor() { // Notice how the constructor sets the STATE in the next line
+this.state = {
+robots: robots,
+searchfield: '';
+}
+}
+}
+
+STATE is something that can change and affect our app, it usually lives in the Parent component.
+Anytime you make your own methods in React use arrow functions.
+Anytime you want to change STATE, you always use the this.setState() method.
+
+https://jsonplaceholder.typicode.com/users
+
+GOOGLE LIFECYCLE METHODS
